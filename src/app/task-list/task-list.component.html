@@ -1,6 +1,18 @@
 
 @for (t of tasks(); track t.name) {
-<li>{{t.name}}</li>
+
+  @if (t.completed) {
+    <li>{{t.name}}
+    <input class="strike" [appStrikeThrough]="t" type="checkbox">
+    </li>
+  } @else {
+    <li>
+      {{t.name}}
+      <input [appStrikeThrough]="t" type="checkbox">
+    </li>
+  }
+
+
  }
 
 
