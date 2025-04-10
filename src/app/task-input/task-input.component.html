@@ -1,0 +1,11 @@
+<div>
+<h1>Add a new task!</h1>
+<form #form name="form" (submit)="addTaskHandler(taskName.value); $event.preventDefault()">
+  <label for="task-name">Task Name</label>
+  <input #taskName name="taskName" type="text" placeholder="Enter new task name">
+<button type="submit">
+    Add Task
+</button>
+</form>
+</div>
+
